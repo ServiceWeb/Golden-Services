@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Comfort - Elevating Your Golden Years</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #3A6EA5;
+            --secondary-color: #FF6B6B;
+            --accent-color: #FFD93D;
+            --text-color: #333333;
+            --light-text-color: #FFFFFF;
+            --background-color: #F6F9FC;
+            --card-background: #FFFFFF;
+            --font-main: 'Roboto', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			
+			
+        }
+		
+		
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+			align-items: center;
+			
+			
+            
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+			
+			
+        }
+		
+		
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(58, 110, 165, 0.8), rgba(58, 110, 165, 0.8)), url("C:\\Users\\morip\\Desktop\\house cleaning\\זוג מבוגר4.jpg") ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 1000%;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			min-height: 100vh;
+           height: 160vh;
+			
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text-color);
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--light-text-color);
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        .section {
+            padding: 5rem 0;
+			
+        }
+
+        .section-title {
+		
+            font-family: var(--font-heading);
+            font-size: 4rem;
+			margin-top: -95px;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+			
+        }
+		
+
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-card {
+            background-color: var(--card-background);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1rem;
+        }
+
+        .service-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .testimonials {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+
+        .contact {
+            background-color: var(--card-background);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .footer-links li {
+            margin-left: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--light-text-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Golden Services</div>
+			 <img src="C:\Users\morip\Desktop\house cleaning\circular_logo.png" alt="logo" style="width:50px; height: 50px; margin-right: 470px">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Elevate Your Golden Years</h1>
+                    <p>Experience unparalleled comfort and care with our premium home services.</p>
+                    <a href="#contact" class="btn">Discover Your Comfort</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+				<img src="C:\Users\morip\Desktop\house cleaning\circular_logo.png" alt="section-title" style="width:65px; height: 65px; margin-top: -100px; margin-left: 940px;  ">
+             <h2 class="section-title">Our Premium Services</h2>
+					
+				
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="C:\\Users\\morip\\Desktop\\house cleaning\\ניקיון הבית.jpg" alt="Luxurious Home Cleaning">
+                        <div class="service-content">
+                            <h3>Luxurious Home Cleaning – Immaculate Cleanliness Tailored to Your Exacting Standards and Schedule
+</h3>
+                            <p>Our luxurious home cleaning service is designed to provide you with a pristine and spotless living environment, perfectly aligned with your specific needs and preferences. Our professional cleaning team brings the highest standards of cleanliness to your home, ensuring that every corner is meticulously cleaned and cared for.
+
+Whether you need regular maintenance cleaning, deep cleaning for special occasions, or a customized cleaning plan, we tailor our services to your exact schedule and standards. Our team uses top-quality cleaning products and techniques to ensure that your home not only looks immaculate but also feels fresh and welcoming.
+
+With a focus on detail, we take care of everything – from dusting and vacuuming to scrubbing and polishing, all while respecting your time and personal preferences. Our luxurious home cleaning service provides the ultimate in cleanliness, comfort, and convenience, leaving you with a beautifully maintained home without lifting a finger.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="C:\\Users\\morip\\Desktop\\house cleaning\\שפית2.jpg" alt="Gourmet Meal Preparation">
+                        <div class="service-content">
+                            <h3>Gourmet Meal Preparation – Delectable and Nutritious Meals Tailored to Your Palate</h3>
+                            <p>Professional chefs come to your home and prepare a wide variety of gourmet meals, fully customized to your culinary preferences and dietary needs, all right in your kitchen.
+
+Whether you prefer healthy and nutritious meals, luxury dishes with unique flavors, or even traditional recipes, our chefs will prepare everything on-site, ensuring you enjoy a rich array of flavors, exactly to your taste. Our service is designed to provide you with the highest level of culinary experience – all in the comfort and intimacy of your own home.
+
+Throughout the process, we focus on the quality of the ingredients, freshness, and taste, while maintaining nutritional and health standards that are specifically tailored for you. Gourmet meal preparation offers convenience, flavor, and a luxurious service delivered right to your home and prepared in your kitchen.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="C:\\Users\\morip\\Desktop\\house cleaning\\קניות1.jpg" alt="Personal Shopping Concierge">
+                        <div class="service-content">
+                            <h3>Personal Shopping – Tailored Convenience for Your Life</h3>
+                            <p>Our Personal Shopping service is designed to make your shopping experience simple and enjoyable. Whether it's clothing, home products, or special gifts, our dedicated team works with you personally to understand your preferences and needs. We handle every step of the process – from selecting the right products to ensuring everything arrives at your doorstep, so you can focus on what truly matters.
+
+We’ll save you time, find the best deals, and ensure that your choices reflect your unique style and taste. Our Personal Shopping service brings convenience, quality, and luxury directly to you.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="C:\\Users\\morip\\Desktop\house cleaning\\תחזוקה3.jpg" alt="Wellness and Companionship">
+                        <div class="service-content">
+                            <h3>Comprehensive At-Home Maintenance Services for a Worry-Free Home</h3>
+                            <p>We also offer regular home maintenance services as part of our 'At-Home' service. This includes ongoing care and maintenance for all household needs, tailored to help residents keep their home in optimal condition over time..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">Voices of Satisfaction</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">"Golden Comfort has truly redefined luxury living for seniors. Their attention to detail and personalized care are unmatched."</p>
+                        <div class="testimonial-author">
+                            <img src="C:\\Users\\morip\\Desktop\\house cleaning\\אישה1.jpg" alt="Margaret">
+                            <span>Margaret W., 55</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">"The gourmet meals are a daily delight. It's like having a Michelin-star restaurant in my own home!"</p>
+                        <div class="testimonial-author">
+                            <img src="C:\\Users\\morip\\Desktop\\house cleaning\\המלצה.jpg" alt="Robert">
+                            <span>Robert L., 72</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">"Their wellness program has dramatically improved my quality of life. I feel vibrant and engaged every day."</p>
+                        <div class="testimonial-author">
+                            <img src="C:\\Users\\morip\\Desktop\\house cleaning\\ממליצים.jpg" alt="Elizabeth">
+                            <span>Elizabeth C., 65</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Connect With Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="homecleaning1ser@gmail.com">HomeCleaning1Ser@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+19549105770">+1-(954)-910-5770</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Golden Services. Taking care of the house and you with love and reliability.</p>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Fade-in animation for service cards
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.
+  </script>
+</body></html>		
